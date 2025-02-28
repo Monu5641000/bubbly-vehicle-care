@@ -1,10 +1,16 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Shield, Sparkles } from "lucide-react";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
+  const handleBookNow = () => {
+    navigate("/booking");
+  };
+  
   return (
     <div className="min-h-screen bg-soft-yellow">
       {/* Hero Section */}
@@ -36,7 +42,10 @@ const Index = () => {
                 Professional washing & servicing for cars, bikes, and all types of vehicles. We come to you, so you don't have to go anywhere!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-orange-400 text-white hover:bg-orange-500 text-lg px-8 py-6 rounded-full">
+                <Button 
+                  className="bg-orange-400 text-white hover:bg-orange-500 text-lg px-8 py-6 rounded-full"
+                  onClick={handleBookNow}
+                >
                   Book Now
                 </Button>
                 <Button variant="outline" className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-6 rounded-full">
@@ -180,7 +189,10 @@ const Index = () => {
               Experience the convenience of professional vehicle cleaning and servicing right at your doorstep. Book your first service today and get ₹100 off!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-6 rounded-full">
+              <Button 
+                className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-6 rounded-full"
+                onClick={handleBookNow}
+              >
                 Book Your First Service
               </Button>
               <Button variant="outline" className="bg-white border-2 border-orange-400 text-orange-500 hover:bg-orange-50 text-lg px-8 py-6 rounded-full">
