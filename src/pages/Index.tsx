@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -76,18 +75,15 @@ const Index = () => {
                   <div className="w-full h-64 flex items-center justify-center">
                     <div className="relative">
                       {/* Simple car illustration */}
-                      <div className="w-64 h-32 bg-blue-500 rounded-t-3xl rounded-b-lg relative">
-                        {/* Car windows */}
-                        <div className="absolute top-0 left-1/4 right-1/4 h-16 bg-blue-700 rounded-t-2xl"></div>
-                        
-                        {/* Wheels */}
-                        <div className="absolute -bottom-5 left-6 w-12 h-12 bg-gray-800 rounded-full border-4 border-gray-300"></div>
-                        <div className="absolute -bottom-5 right-6 w-12 h-12 bg-gray-800 rounded-full border-4 border-gray-300"></div>
-                        
-                        {/* Bubbles */}
-                        <div className="absolute -top-8 left-10 w-6 h-6 bg-white rounded-full opacity-80"></div>
-                        <div className="absolute -top-6 left-20 w-4 h-4 bg-white rounded-full opacity-80"></div>
-                        <div className="absolute -top-10 right-10 w-5 h-5 bg-white rounded-full opacity-80"></div>
+                      <div className="w-64 h-32 bg-blue-500 rounded-t-3xl rounded-b-lg relative animate-bounce-x">
+                        {/* Add wheels to the vehicle */}
+                        <div className="absolute bottom-0 left-10 w-12 h-12 bg-gray-800 rounded-full animate-spin"></div>
+                        <div className="absolute bottom-0 right-10 w-12 h-12 bg-gray-800 rounded-full animate-spin"></div>
+                        {/* Add windows */}
+                        <div className="absolute top-5 left-6 w-12 h-10 bg-sky-300 rounded-lg"></div>
+                        <div className="absolute top-5 right-6 w-12 h-10 bg-sky-300 rounded-lg"></div>
+                        {/* Add headlights */}
+                        <div className="absolute bottom-10 left-0 w-4 h-4 bg-yellow-300 rounded-full"></div>
                       </div>
                     </div>
                   </div>
